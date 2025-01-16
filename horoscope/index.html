@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Quickteller app</title>
+    <style>
+              #main{
+      	height: auto;
+      	width: 100%;
+      	background: linear-
+      	background-position: center;
+      	background-size: cover;
+      	position: absolute;
+      }
+      #inputs{
+      	width: 24rem;
+      	height: 45rem;
+      	box-shadow: 10px 10px 15 coral;
+      	position: relative;
+      	margin: 6% auto;
+      	border-radius: 1rem;
+      	font-weight: bolder;
+      	background-color: #12475f;
+      	padding: 8px;
+      	color: white;
+      	text-align: center;
+      }
+      input{
+      	font-weight: bolder;
+      	background-color: rgba(0,0,0,0.8);
+      	color: white;
+      	border: none;
+      	margin: 10px;
+      	padding: 10px;
+      	box-shadow: 4px 4px 10px white;
+      	border-radius: 9px;
+      }
+      p{
+      	margin-top: 15px;
+      }
+      body{
+        font-family:cursive;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="main">
+      <div id="inputs" align="center">
+        <h1>Welcome to <span style="color: maroon">Quickteller app</span></h1>
+        <hr />
+        <h2>enter your month of birth to findout your horoscope</h2>
+        <input
+          type="text"
+          name=""
+          id="month"
+          placeholder="name of month of birth"
+        /><br />
+        <input
+          type="number"
+          name=""
+          id="dateof"
+          placeholder="Day"
+          min="1"
+          max="31"
+        /><br />
+        <input type="button" name="" onclick="result()" value="check result" />
+        <p id="output"></p>
+        <hr />
+        <center><h3>prediction for month</h3></center>
+        <p id="predict"></p>
+        <hr />
+      </div>
+    </div>
+  </body>
+  <script>
+    function result() {
+      var getmonth = document.getElementById("month").value.toLowerCase();
+      var getdate = document.getElementById("dateof").value;
+      var input = getmonth.toLowerCase();
+      if (
+        (getmonth == "january" && getdate >= 21) ||
+        (getmonth == "february" && getdate <= 18)
+      ) {
+        document.getElementById("output").innerHTML = "AQUARIUS";
+        document.getElementById("predict").innerHTML =
+          "The work you have put into your projects up to this point is likely to bear fruits. For the time being, you can sit and relax. Then you can start reaping the rewards of your labour. When dealing with your siblings, try to keep your proud, impatient, and bombastic character at bay, as minor disputes with your siblings are possible.";
+      }
+
+      if (
+        (getmonth == "february" && getdate >= 19) ||
+        (getmonth == "march" && getdate <= 20)
+      ) {
+        document.getElementById("output").innerHTML = "PISCES";
+        document.getElementById("predict").innerHTML =
+          "This month, your communication skills and diplomatic approach are likely to be extremely beneficial to you on both a personal and professional level.";
+      }
+
+      if (
+        (getmonth == "march" && getdate >= 21) ||
+        (getmonth == "april" && getdate <= 20)
+      ) {
+        document.getElementById("output").innerHTML = "ARIES";
+        document.getElementById("predict").innerHTML =
+          "This month is significant in terms of relationships and collaboration with people you interact with regularly.";
+      }
+
+      if (
+        (getmonth == "april" && getdate >= 21) ||
+        (getmonth == "may" && getdate <= 21)
+      ) {
+        document.getElementById("output").innerHTML = "Taurus";
+        document.getElementById("predict").innerHTML =
+          "You work hard to achieve happiness and success as a native who resists change but accepts it with modesty. This month, however, the hard work shall continue.";
+      }
+
+      if (
+        (getmonth == "may" && getdate >= 22) ||
+        (getmonth == "june" && getdate <= 21)
+      ) {
+        document.getElementById("output").innerHTML = "GEMINI";
+        document.getElementById("predict").innerHTML =
+          "This month, you must be patient when making decisions because most of the planetary transits may affect your intellect.";
+      }
+      if (
+        (getmonth == "june" && getdate >= 22) ||
+        (getmonth == "july" && getdate <= 22)
+      ) {
+        document.getElementById("output").innerHTML = "CANCER";
+        document.getElementById("predict").innerHTML =
+          "According to your monthly Horoscope, you may embark on a new business venture. It could be a unique business opportunity or a project in which you can participate this month. The monthly horoscope also includes the chance of your marrying.";
+      }
+      if (
+        (getmonth == "july" && getdate >= 23) ||
+        (getmonth == "august" && getdate <= 23)
+      ) {
+        document.getElementById("output").innerHTML = "LEO";
+        document.getElementById("predict").innerHTML =
+          "For those who are dating, this may not be an inspiring month. They may get bored, but they would be wise to stick with their partner. In addition, they want to make them happy with their love and care.";
+      }
+      if (
+        (getmonth == "august" && getdate >= 24) ||
+        (getmonth == "september" && getdate <= 22)
+      ) {
+        document.getElementById("output").innerHTML = "VIRGO";
+        document.getElementById("predict").innerHTML =
+          "Some complications may cause discomfort at the start of this month. Don't be boring; try something out of the ordinary that is both realistic and important.";
+      }
+      if (
+        (getmonth == "september" && getdate >= 23) ||
+        (getmonth == "october" && getdate <= 23)
+      ) {
+        document.getElementById("output").innerHTML = "LIBRA";
+        document.getElementById("predict").innerHTML =
+          "This month may start on a high note in your professional life. Businesspeople can face numerous challenges and should avoid making hasty decisions.";
+      }
+      if (
+        (getmonth == "october" && getdate >= 24) ||
+        (getmonth == "november" && getdate <= 22)
+      ) {
+        document.getElementById("output").innerHTML = "SCORPIO";
+        document.getElementById("predict").innerHTML =
+          "You may face some ups and downs during this month. You are under the influence of Saturn and Jupiter, which is likely to create some confusion and problems in your life.";
+      }
+      if (
+        (getmonth == "november" && getdate >= 23) ||
+        (getmonth == "december" && getdate <= 21)
+      ) {
+        document.getElementById("output").innerHTML = "SAGITTARIUS";
+        document.getElementById("predict").innerHTML =
+          "The first part of the month would need you to deal with issues concerning your personality and character. This planetary alignment may cause you to become emotionally dependant on your spouse.";
+      }
+      if (
+        (getmonth == "december" && getdate >= 22) ||
+        (getmonth == "january" && getdate <= 20)
+      ) {
+        document.getElementById("output").innerHTML = "CAPRICORN";
+        document.getElementById("predict").innerHTML =
+          "This month, business professionals are likely to meet their objectives. It is time to improve your financial situation by enrolling in a new course in a similar sector.";
+      }
+    }
+  </script>
+</html>
